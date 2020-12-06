@@ -8,10 +8,12 @@ import sys
 # Custom Path
 pytesseract.pytesseract.tesseract_cmd = r".\Tesseract-OCR\tesseract.exe"
 
-with Image.open(sys.argv[1]) as image:
-    text = pytesseract.image_to_string(image, lang="eng")
 
-# image = Image.open("test.png")
-# text = pytesseract.image_to_string(image, lang="eng")
+def get_text(image_name):
+    with Image.open(image_name) as image:
+        text = pytesseract.image_to_string(image, lang="eng")
 
-print(text)
+    return text
+
+
+print(get_text(sys.argv[1]))

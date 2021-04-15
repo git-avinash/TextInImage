@@ -1,14 +1,15 @@
 [[source]]
-name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
+name = "pypi"
+
+[packages]
+pillow = "==8.0.1"
+pytesseract = "==0.3.6"
+selenium = "==3.141.0"
+opencv-python = "*"
 
 [dev-packages]
 
-[packages]
-pytesseract = "*"
-pillow = "*"
-selenium = "*"
-
 [requires]
-python_version = "3.8"
+python_version = "3.9"
